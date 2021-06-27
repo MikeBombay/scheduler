@@ -19,7 +19,7 @@ textarea{
   color: black;
   border-radius: 0;
   border-bottom: 4px solid black;
-  height: 200px;
+  height: 220px;
 }
 
 .lead {
@@ -51,9 +51,11 @@ textarea{
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed white;
+  font-size: 18px;
+  text-align: center;
+  margin: auto;
+  text-decoration-color: white;
+  border-top: 1px white;
 }
 
 .past {
