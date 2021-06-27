@@ -32,10 +32,6 @@ textarea{
   margin-bottom: 5%;
 }
 
-.description{
-  white-space: pre-wrap;
-}
-
 .time-block{
   text-align: justify;
   border-right: 1px solid white;
@@ -61,17 +57,17 @@ textarea{
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #6d6c6c;
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #c4423b;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #358a35;
   color: white;
 }
 

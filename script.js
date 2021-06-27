@@ -1,11 +1,11 @@
 moment(Date);
 $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
 
-var currentTime = moment();
-
+//create variable for current hour
 var currentHour = moment().hour();
-//console.log(currentHour);
 
+
+//function checks current hour against each hour in the scheduler and applies appropriate class for color code
 function checkHour() {
 $(".time-block").each(function () {
     var thisHour = parseInt($(this).attr("id"));
@@ -26,32 +26,26 @@ $(".time-block").each(function () {
         $(this).removeClass("past");
         $(this).addClass("future");
     }})};
-    
 
-  function renderSaved(){
-    $(".plan").each(function(){
-        var saved = $(this).attr("id");
-        $(this).val(localStorage.getItem(saved));
-    });
-};
- 
+//when page is refreshed or loaded function retrieves and renders saved appointments to page
 
+    function renderSaved(){
+        $(".plan").each(function(){
+            var input = $(this).parent().attr('id');
+            $(this).val(localStorage.getItem(input));
+        });
+    };
+
+    //on save button click, value of input saved with key corresponding to time of day in local storage 
     $(".saveBtn").click(function (event) {
         event.preventDefault();
      
         var savedPlan = $(this).siblings(".plan").val();
         var timeOf = $(this).parent().attr('id');
-        
-
-      console.log(savedPlan);
-      console.log(timeOf);
-
-      
-
-        localStorage.setItem(timeOf, savedPlan);
-
+  
+        localStorage.setItem(timeOf, savedPlan)
 
     });
-
-    renderSaved();
+//call functions
     checkHour();
+    renderSaved();
