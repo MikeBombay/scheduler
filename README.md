@@ -36,3 +36,10 @@ THEN the saved events persist
 
 Deployed: https://mikebombay.github.io/scheduler/
 
+Screenshot:
+
+
+![image](https://user-images.githubusercontent.com/82775499/123560297-5a39a100-d76f-11eb-9901-a76cc9ac22e1.png)
+
+
+
